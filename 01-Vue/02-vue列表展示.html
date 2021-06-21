@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="item in name">{{item}}</li>
+    </ul>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    //let(变量)/const（常量）
+    const app=new Vue({
+        el:'#app',
+        data:{
+            message:"hello，wold",
+            name:["啦啦啦",'来了老弟','代付款']
+        }
+    })
+</script>
+</body>
+</html>

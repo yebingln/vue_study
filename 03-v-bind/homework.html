@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            color:red
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <ul>
+        <li @click="changeColor(index)" v-for="(m,index) in movies" :class="{active:currentIndex===index}">{{index}}-{{m}}</li>
+    </ul>
+    <a href="">{{fullName}}</a>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    //let(变量)/const（常量）
+    const app=new Vue({
+        el:'#app',
+        data:{
+            message:"hello，wold",
+            movies:["海王","海尔兄弟","黑猫警长"],
+            firstName:'hello',
+            lastName:'王安',
+            currentIndex:0
+        },
+        computed:{
+            fullName:function (){
+                return this.firstName+' '+this.lastName
+            }
+        },
+        methods:{
+            changeColor(index){
+                this.currentIndex=index
+            }
+        }
+    })
+</script>
+</body>
+</html>

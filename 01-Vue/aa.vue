@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">{{message}}</div>
+<div>{{message}}</div>
+<script src="../js/vue.js"></script>
+<script>
+  //let(变量)/const（常量）
+  const app=new Vue({
+      el:'#app',
+      data:{
+        message:"hello，wold"
+      }
+  })
+</script>
+</body>
+</html>
